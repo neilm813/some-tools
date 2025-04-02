@@ -1,0 +1,26 @@
+{
+  "name": "shared-discord-some-bot-types",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/discord/some-bot/types/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/shared/discord/some-bot/types",
+        "main": "libs/shared/discord/some-bot/types/src/index.ts",
+        "tsConfig": "libs/shared/discord/some-bot/types/tsconfig.lib.json",
+        "assets": ["libs/shared/discord/some-bot/types/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/shared/discord/some-bot/types/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}

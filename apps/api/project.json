@@ -1,0 +1,76 @@
+{
+  "name": "api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/api/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/api",
+        "main": "apps/api/src/main.ts",
+        "tsConfig": "apps/api/tsconfig.app.json",
+        "assets": ["apps/api/src/assets"]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/api/src/environments/environment.ts",
+              "with": "apps/api/src/environments/environment.prod.ts"
+            },
+            {
+              "replace": "libs/shared/api/data-access/src/lib/environments/environment.ts",
+              "with": "libs/shared/api/data-access/src/lib/environments/environment.prod.ts"
+            },
+            {
+              "replace": "libs/shared/discord/some-bot/environments/src/lib/environment.ts",
+              "with": "libs/shared/discord/some-bot/environments/src/lib/environment.prod.ts"
+            },
+            {
+              "replace": "libs/shared/ta-buddy/data-access/src/lib/environments/environment.ts",
+              "with": "libs/shared/ta-buddy/data-access/src/lib/environments/environment.prod.ts"
+            },
+            {
+              "replace": "libs/shared/learn/data-access/src/lib/environments/environment.ts",
+              "with": "libs/shared/learn/data-access/src/lib/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "options": {
+        "buildTarget": "api:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "api:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/api/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/api"],
+      "options": {
+        "jestConfig": "apps/api/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

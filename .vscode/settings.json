@@ -1,0 +1,61 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  "files.autoSave": "onFocusChange",
+  "prettier.requireConfig": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "markdownlint.config": {
+    "MD033": false
+  },
+  "cSpell.words": [
+    "Abramov",
+    "appbar",
+    "bannable",
+    "bootcamp",
+    "Buildable",
+    "cacheable",
+    "cssmodule",
+    "deduped",
+    "devs",
+    "discordjs",
+    "esbenp",
+    "frontends",
+    "instanceof",
+    "Kickable",
+    "mosunic",
+    "mylib",
+    "Nodeiflux",
+    "npmrc",
+    "nrwl",
+    "pmmmwh",
+    "prebootcamp",
+    "Repliable",
+    "roboto",
+    "servermember",
+    "servermembers",
+    "svgr",
+    "unban",
+    "unbans",
+    "Unbuilt",
+    "unrepliable",
+    "virtuals"
+  ],
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  }
+}

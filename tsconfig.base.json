@@ -1,0 +1,38 @@
+{
+  "display": "Node 16",
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "baseUrl": ".",
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "importHelpers": false,
+    "lib": ["es2021", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2021",
+    "noPropertyAccessFromIndexSignature": true,
+    "paths": {
+      "@some-tools/shared/api/data-access": ["libs/shared/api/data-access/src/index.ts"],
+      "@some-tools/shared/api/types": ["libs/shared/api/types/src/index.ts"],
+      "@some-tools/shared/discord/data-access": ["libs/shared/discord/data-access/src/index.ts"],
+      "@some-tools/shared/discord/some-bot/data-access": ["libs/shared/discord/some-bot/data-access/src/index.ts"],
+      "@some-tools/shared/discord/some-bot/environments": ["libs/shared/discord/some-bot/environments/src/index.ts"],
+      "@some-tools/shared/discord/some-bot/types": ["libs/shared/discord/some-bot/types/src/index.ts"],
+      "@some-tools/shared/discord/types": ["libs/shared/discord/types/src/index.ts"],
+      "@some-tools/shared/learn/data-access": ["libs/shared/learn/data-access/src/index.ts"],
+      "@some-tools/shared/ta-buddy/data-access": ["libs/shared/ta-buddy/data-access/src/index.ts"],
+      "@some-tools/shared/types": ["libs/shared/types/src/index.ts"],
+      "@some-tools/shared/utils/backend/common": ["libs/shared/utils/backend/common/src/index.ts"],
+      "@some-tools/shared/utils/backend/types": ["libs/shared/utils/backend/types/src/index.ts"],
+      "@some-tools/shared/utils/common": ["libs/shared/utils/common/src/index.ts"],
+      "@some-tools/shared/utils/try-fail": ["libs/shared/utils/try-fail/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
