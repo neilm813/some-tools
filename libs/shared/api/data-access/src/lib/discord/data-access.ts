@@ -78,7 +78,7 @@ export const serverMemberDeleteOneByEmail = async (params: ServerMemberDeleteOne
 };
 
 /**
- * Intended for use only from the front-end join page or to be used from a back-up slash DM slash command if the join
+ * Intended for use only from the front-end join page or to be used from a back-up DM slash command if the join
  * page is down.
  */
 export const serverMemberJoinGuildFromJoinPage = async (
